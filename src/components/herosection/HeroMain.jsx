@@ -1,7 +1,7 @@
 import React from "react";
-import HeroPic from "./heroPic";
-import HeroText from "./heroText";
-import HeroGradient from "./heroGradient";
+import HeroPic from "./HeroPic";
+import HeroText from "./HeroText";
+import HeroGradient from "./HeroGradient";
 import SubHeroSection from "./SubHeroSection";
 
 const HeroMain = () => {
