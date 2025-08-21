@@ -1,6 +1,6 @@
 import NavbarMain from "./components/navbar/NavbarMain";
 import SubHeroSection from "./components/herosection/SubHeroSection";
-import HeroGradient from "./components/herosection/heroGradient";
+import HeroGradient from "./components/herosection/HeroGradient";
 import AboutMeMain from "./components/aboutMe/AboutMeMain";
 import HelperSection from "./components/HelperSection";
 import SkillMain from "./components/skillSection/SkillMain";
