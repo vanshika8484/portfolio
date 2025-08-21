@@ -38,7 +38,7 @@ const projects = [
     name: "StudySync Website",
     year: "Nov 2024",
     align: "left",
-    image: "../../../public/images/websiteImg4.jpg",
+    image: "/images/websiteImg4.jpg",
     link: "https://vanshika8484.github.io/StudySyncWebsite/",
   },
 ];
