@@ -20,7 +20,7 @@ const HeroPic = () => {
 
       {/* Enhanced background hexagon with multiple layers */}
       <div className="absolute -z-10 flex justify-center items-center">
-        <PiHexagonThin className="md:h-[90%] sm:h-[120%] min-h-[500px] text-cyan blur-md animate-[spin_20s_linear_infinite]" />
+        <PiHexagonThin className="md:h-[90%] sm:h-[120%] min-h-[500px] w-auto text-cyan blur-md animate-[spin_20s_linear_infinite]" />
       </div>
 
       {/* Additional floating decorative elements with enhanced positioning */}
