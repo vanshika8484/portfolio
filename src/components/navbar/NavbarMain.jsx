@@ -14,7 +14,7 @@ const NavbarMain = () => {
         <NavbarLogo />
         <div
           className={`${
-            menuOpen ? "lg:block" : "lg:hidden"
+            menuOpen ? "max-[1030px]:block" : "max-[1030px]:hidden"
           } lg:block transition-all duration-300 ease-out`}
         >
           <NavbarLinks />
