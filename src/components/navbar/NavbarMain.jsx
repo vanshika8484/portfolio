@@ -3,32 +3,40 @@ import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarBtn from "./NavbarBtn";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 const NavbarMain = () => {
-  const [menuOpen, setmenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setmenuOpen(!menuOpen);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <nav className="max-w-[1100px] mx-auto px-4 w-full fixed left-[50%] -translate-x-[50%] z-40 flex gap-4 mt-2 animate-fadeInDown">
-      <div className="flex justify-between w-full max-w-[900px] mx-auto bg-black items-center p-6 rounded-r-full rounded-l-full border-[0.5px] border-orange hover:border-cyan hover:shadow-cyanShadow transition-all duration-500 ease-out">
+    <nav className="fixed left-1/2 -translate-x-1/2 z-40 w-full max-w-[1100px] px-4 mt-2 animate-fadeInDown">
+      <div className="flex items-center justify-between bg-black p-6 rounded-full border border-orange hover:border-cyan hover:shadow-cyanShadow transition-all duration-500 ease-out">
+        {/* Logo */}
         <NavbarLogo />
-        <div
-          className={`${
-            menuOpen ? "max-[1030px]:block" : "max-[1030px]:hidden"
-          } lg:block transition-all duration-300 ease-out`}
-        >
+
+        {/* Desktop Links + Button */}
+        <div className="hidden lg:flex items-center gap-6">
           <NavbarLinks />
+          <NavbarBtn />
         </div>
-        <NavbarBtn />
-      </div>
-      <div className="flex lg:hidden sm:block p-6 bg-black items-center justify-center rounded-full border border-orange hover:border-cyan hover:shadow-cyanShadow transition-all duration-300 ease-out">
+
+        {/* Mobile Hamburger */}
         <button
-          className="text-3xl p-3 border border-orange rounded-full text-white cursor-pointer hover:border-cyan hover:text-cyan hover:scale-110 transition-all duration-300 ease-out"
+          className="lg:hidden text-3xl p-3 border border-orange rounded-full text-white cursor-pointer hover:border-cyan hover:text-cyan hover:scale-110 transition-all duration-300 ease-out"
           onClick={toggleMenu}
         >
           <GiHamburgerMenu />
         </button>
       </div>
+
+      {/* Mobile Menu (Dropdown) */}
+      {menuOpen && (
+        <div className="lg:hidden mt-2 flex flex-col items-center bg-black p-6 rounded-2xl border border-orange gap-4">
+          <NavbarLinks />
+          <NavbarBtn />
+        </div>
+      )}
     </nav>
   );
 };
